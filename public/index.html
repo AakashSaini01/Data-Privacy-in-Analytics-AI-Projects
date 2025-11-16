@@ -19,27 +19,36 @@
 <body class="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 min-h-screen">
     
     <div class="container mx-auto p-2 sm:p-8">
-        <!-- Navigation -->
-        <div class="flex justify-between items-center mt-2">
-            <button id="prevBtn" onclick="prevSlide()" disabled class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-900 rounded-lg font-semibold hover:bg-indigo-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
-                ← Previous
-            </button>
-            
-            <div id="slideInfo" class="text-white font-semibold text-center">
-                <div class="text-base sm:text-lg">Main Content Slide</div>
-            </div>
-            
-            <button id="nextBtn" onclick="nextSlide()" class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-900 rounded-lg font-semibold hover:bg-indigo-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
-                Next →
-            </button>
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-2">
+        <button id="prevBtn" onclick="prevSlide()" disabled class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-900 rounded-lg font-semibold hover:bg-indigo-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
+            ← Previous
+        </button>
+        <div id="slideInfo" class="text-white font-semibold text-center">
+            <div class="text-base sm:text-lg">Introduction</div>
         </div>
+        <button id="nextBtn" onclick="nextSlide()" class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-900 rounded-lg font-semibold hover:bg-indigo-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
+            Next →
+        </button>
     </div>
+</div>
 
-    <div class="container mx-auto p-4 sm:p-8">
-        <!-- Main Slide Container -->
-        <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-12 min-h-[600px]">
-            <!-- Slide 1 -->
-            <div id="slide1" class="slide-content">
+<div class="container mx-auto p-4 sm:p-8">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-12 min-h-[600px]">
+
+        <!-- Slide 1: Profile & Topic -->
+        <div id="slide1" class="slide-content">
+            <div class="text-center mb-8 my-auto">
+                <img class="mx-auto rounded-full w-28 h-28 sm:w-40 sm:h-40 mb-6 shadow-lg" src="../public/media/img/profile.jpeg" alt="Aakash Saini Photo">
+                <h1 class="text-3xl sm:text-5xl font-bold text-gray-800 mb-4">Aakash Saini</h1>
+                <p class="text-lg sm:text-2xl text-indigo-700 mb-2">MBA Data Science</p>
+                <div class="text-xl sm:text-3xl font-bold text-purple-800 mb-2">Data Privacy in Analytics & AI Projects</div>
+                <p class="text-base sm:text-lg text-gray-600">A journey through ethical data handling, legal compliance, and real-world impact.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Main Content Slide (unchanged) -->
+        <div id="slide2" class="slide-content hidden">
                 <!-- Header -->
                 <div class="text-center mb-6 sm:mb-8">
                     <div class="flex items-center justify-center gap-3 mb-3">
@@ -189,103 +198,61 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div id="slide2" class="slide-content hidden">
-                <div class="h-full flex flex-col items-center justify-center py-8">
-                    <div class="text-center mb-8 sm:mb-12">
-                        <h1 class="text-4xl sm:text-6xl font-bold text-gray-800 mb-4 sm:mb-6">Questions & Answers</h1>
-                        <p class="text-lg sm:text-2xl text-gray-600 mb-4">Let's Discuss Data Privacy in AI</p>
-                        <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 sm:p-12 rounded-3xl shadow-2xl max-w-4xl mb-8 sm:mb-12 w-full">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center mb-6 sm:mb-8">
-                            <div class="transform hover:scale-105 transition-all">
-                                <div class="text-3xl sm:text-5xl font-bold text-indigo-600 mb-2 sm:mb-3">Privacy</div>
-                                <div class="text-base sm:text-lg text-gray-700">by Design</div>
-                            </div>
-                            <div class="transform hover:scale-105 transition-all">
-                                <div class="text-3xl sm:text-5xl font-bold text-purple-600 mb-2 sm:mb-3">Ethics</div>
-                                <div class="text-base sm:text-lg text-gray-700">in Every Model</div>
-                            </div>
-                            <div class="transform hover:scale-105 transition-all">
-                                <div class="text-3xl sm:text-5xl font-bold text-pink-600 mb-2 sm:mb-3">Trust</div>
-                                <div class="text-base sm:text-lg text-gray-700">through Transparency</div>
-                            </div>
-                        </div>
-
-                        <div class="h-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-full my-6 sm:my-8"></div>
-
-                        <div class="text-center">
-                            <p class="text-base sm:text-xl font-semibold text-gray-700 mb-2">
-                                "The future of AI depends on how well we protect the present data"
-                            </p>
-                            <p class="text-sm sm:text-base text-gray-500">- Data Science Responsibility</p>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <p class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">Thank You!</p>
-                        <p class="text-lg sm:text-xl text-gray-600 mb-2">Aakash Saini</p>
-                        <p class="text-base sm:text-lg text-gray-500">MBA Data Science</p>
-                    </div>
-
-                    <div class="mt-6 sm:mt-8 text-center">
-                        <div class="inline-block bg-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg">
-                            <p class="text-gray-600 text-xs sm:text-sm">Open for your valuable questions and insights</p>
-                        </div>
-                    </div>
+<!-- Slide 3: Thank You & Q&A -->
+        <div id="slide3" class="slide-content hidden">
+            <div class="h-full flex flex-col items-center justify-center py-8">
+                <h1 class="text-5xl sm:text-6xl font-bold text-gray-800 mb-6">Thank You!</h1>
+                <p class="text-2xl sm:text-3xl text-indigo-700 mb-4">Let's Discuss Data Privacy in AI</p>
+                <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-lg sm:text-xl text-gray-600 mb-2">Aakash Saini | MBA Data Science</p>
+                <div class="bg-white px-6 py-4 rounded-full shadow-lg mt-8">
+                    <p class="text-gray-600 text-sm">Open for your valuable questions and insights</p>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
 
-    <script>
+<script>
+    let currentSlide = 0;
+    const totalSlides = 3;
 
-        function nextSlide() {
-            if (currentSlide === 0) {
-                currentSlide = 1;
-                document.getElementById('slide1').classList.add('hidden');
-                document.getElementById('slide2').classList.remove('hidden');
-                document.getElementById('slideNumber').textContent = '2';
-                document.getElementById('prevBtn').disabled = false;
-                document.getElementById('nextBtn').disabled = true;
-                
-                // Update slide info
-                document.getElementById('slideInfo').innerHTML = `
-                    <div class="text-base sm:text-lg">Q&A Session</div>
-                    <div class="text-xs sm:text-sm opacity-80">3 minutes allocated</div>
-                `;
-                
-                // Update timer label
-                document.getElementById('timerLabel').textContent = '(3 min total)';
-                
-                            }
+    function showSlide(n) {
+        for (let i = 1; i <= totalSlides; i++) {
+            document.getElementById(`slide${i}`).classList.add('hidden');
         }
+        document.getElementById(`slide${n+1}`).classList.remove('hidden');
+        document.getElementById('prevBtn').disabled = n === 0;
+        document.getElementById('nextBtn').disabled = n === totalSlides-1;
 
-        function prevSlide() {
-            if (currentSlide === 1) {
-                currentSlide = 0;
-                document.getElementById('slide2').classList.add('hidden');
-                document.getElementById('slide1').classList.remove('hidden');
-                document.getElementById('slideNumber').textContent = '1';
-                document.getElementById('prevBtn').disabled = true;
-                document.getElementById('nextBtn').disabled = false;
-                hasAutoSwitched = false;
-                
-                // Update slide info
-                document.getElementById('slideInfo').innerHTML = `
-                    <div class="text-base sm:text-lg">Main Content Slide</div>
-                    <div class="text-xs sm:text-sm opacity-80">Auto-switches after 7 minutes</div>
-                `;
-                
-                // Update timer label
-                document.getElementById('timerLabel').textContent = '(7 min total)';
-                
-              
-            }
+        // Optional: Update slideInfo text
+        if (n === 0) {
+            document.getElementById('slideInfo').innerHTML = `<div class="text-base sm:text-lg">Introduction</div>`;
+        } else if (n === 1) {
+            document.getElementById('slideInfo').innerHTML = `<div class="text-base sm:text-lg">Main Content Slide</div>`;
+        } else if (n === 2) {
+            document.getElementById('slideInfo').innerHTML = `<div class="text-base sm:text-lg">Thank You & Q&A</div>`;
         }
-    </script>
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides-1) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    }
+
+    // Initialize
+    document.addEventListener("DOMContentLoaded", () => {
+        showSlide(0);
+    });
+</script>
 </body>
 </html>
